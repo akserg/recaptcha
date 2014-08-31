@@ -1,7 +1,7 @@
 ReCaptcha
 =========
 
-ReCaptcha is a server side Dart library for interfacing with [ReCAPTCHA](https://developers.google.com/recaptcha) service from Goole.
+ReCaptcha is a server side Dart library for interfacing with [ReCAPTCHA](https://developers.google.com/recaptcha) service from Google.
 
 Installation
 ------------
@@ -16,7 +16,7 @@ Then, run `pub get` to download and link in the package.
 API Keys
 --------
 
-To use reCAPTCHA, you need to [sign up for API](http://www.google.com/recaptcha/admin#whyrecaptcha) keys for your site. To take full advatages of ReCaptcha plecase read documentation from original [web site](https://developers.google.com/recaptcha).
+To use reCAPTCHA, you need to [sign up for API](http://www.google.com/recaptcha/admin#whyrecaptcha) keys for your site. To take full advatages of ReCaptcha please read documentation from original [web site](https://developers.google.com/recaptcha).
 
 By default, all keys work on "localhost" (or "127.0.0.1"), so you can always develop and test on your local machine.
 
@@ -30,12 +30,12 @@ Once you've signed up for API keys, adding reCAPTCHA to your site consists of tw
 2. Required step on server side to verifying the solution
 3. Optional step like customizations
 
-ReCaptcha library implemented as server side proxy to check validation of reCAPTCHA solution. If you interesting in [display](https://developers.google.com/recaptcha/docs/display) and [verify](https://developers.google.com/recaptcha/docs/verify) reCAPTCHA direclty from Google API web site please refer to original links. 
+ReCaptcha library implemented as server side proxy to check validation of reCAPTCHA solution. If you are interesting in [display](https://developers.google.com/recaptcha/docs/display) and [verify](https://developers.google.com/recaptcha/docs/verify) reCAPTCHA solution direclty from Google API web site please refer to original links. 
 
 Challenge and Non-JavaScript API
 --------------------------------
 
-To make the reCAPTCHA widget appear when your page loads, you will need to insert this snippet of JavaScript & non-JavaScript code in your <form> element and replace your_public_key with your public key:
+To make the reCAPTCHA widget appear when your page loads, you will need to insert this snippet of JavaScript & non-JavaScript code in your `<form>` element and replace your_public_key with your public key:
 
 ```html
 <!-- ... your HTML content ... -->
@@ -44,9 +44,11 @@ To make the reCAPTCHA widget appear when your page loads, you will need to inser
 
   <!-- ... your form code here ... -->
 
-  <script type="text/javascript" src="http://www.google.com/recaptcha/api/challenge?k=your_public_key"></script>
+  <script type="text/javascript" 
+    src="http://www.google.com/recaptcha/api/challenge?k=your_public_key"></script>
   <noscript>
-    <iframe src="http://www.google.com/recaptcha/api/noscript?k=your_public_key" height="300" width="500" frameborder="0"></iframe><br>
+    <iframe src="http://www.google.com/recaptcha/api/noscript?k=your_public_key" 
+      height="300" width="500" frameborder="0"></iframe><br>
     <textarea name="recaptcha_challenge_field" rows="3" cols="40"></textarea>
     <input type="hidden" name="recaptcha_response_field" value="manual_challenge">
   </noscript>
