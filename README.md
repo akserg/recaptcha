@@ -84,7 +84,8 @@ serveRegister(HttpRequest request) {
     String password = data.containsKey('password') ? data['password'] : '';
     String cptChallenge = data.containsKey('recaptcha_challenge_field') ? data['recaptcha_challenge_field'] : '';
     String cptResponse = data.containsKey('recaptcha_response_field') ? data['recaptcha_response_field'] : '';
-    reCaptcha.checkAnswer(request.uri.host, cptChallenge, cptResponse).then((ReCaptchaResponse cptResponse) {
+    reCaptcha.checkAnswer(request.uri.host, cptChallenge, cptResponse)
+    .then((ReCaptchaResponse cptResponse) {
       response.statusCode = HttpStatus.OK;
       setCORSHeader(response);
       if (cptResponse.valid) {
