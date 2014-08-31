@@ -62,15 +62,15 @@ To make the reCAPTCHA widget appear when your page loads, you will need to inser
 
 There are two form fields:
 
-- **recaptcha_challenge_field** is a hidden field that describes the CAPTCHA which the user is solving. It corresponds to the "challenge" parameter required by the reCAPTCHA verification API.
-- **recaptcha_response_field** is a text field where the user enters their solution. It corresponds to the "response" parameter required by the reCAPTCHA verification API.
+- **recaptcha_challenge_field** is a hidden field that describes the CAPTCHA which the user is solving. It corresponds to the `challenge` parameter required by the reCAPTCHA verification API.
+- **recaptcha_response_field** is a text field where the user enters their solution. It corresponds to the `response` parameter required by the reCAPTCHA verification API.
 
 These two fields will be passed to the server side ReCaptcha Dart library on your server that processes this form and verifies the reCAPTCHA solution via the reCAPTCHA verification API.
 
 Server Side Integration
 -----------------------
 
-ReCaptcha can be quickly integrated with any Dart server solution via calling checkAnswer method of ReCaptcha class. You need send remote URL, challenge and response come from a client. 
+ReCaptcha can be quickly integrated with any Dart server solution via calling `checkAnswer` method of `ReCaptcha` class. You need send remote URL, challenge and response come from a client. 
 Here is an example of how registration form with reCAPTCHA widget can be served on server side:
 
 ```dart
