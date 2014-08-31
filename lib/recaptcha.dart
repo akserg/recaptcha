@@ -14,14 +14,13 @@ class ReCaptchaResponse {
   // Validation result
   final bool valid;
   
-  // Error message if error was happened
-  final String errorMessage;
+  // Error code from reCAPTCHA
+  final String errorCode;
 
   /**
-   * Create new instance of [ReCaptchaResponse] with [valid] state and
-   * optional [this.errorMessage]
+   * Create new instance of [ReCaptchaResponse] with [valid] state and [errorCode]
    */
-  ReCaptchaResponse(this.valid, this.errorMessage);
+  ReCaptchaResponse(this.valid, this.errorCode);
 }
 
 /**

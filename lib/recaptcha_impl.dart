@@ -41,7 +41,7 @@ class ReCaptchaImpl implements ReCaptcha {
           if (messages.length > 1)
             errorMessage = messages[1];
           else
-            errorMessage = "unknown-errror";
+            errorMessage = "recaptcha-not-reachable";
         }
         completer.complete(new ReCaptchaResponse(valid, errorMessage));
       } else {
